@@ -1,0 +1,146 @@
+.landing-page {
+  display: flex;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.left-container {
+  width: 240px;
+  height: 550px;
+  /* background-color: #baa96c; */
+  background-color: rgba(186, 169, 108, 0.3);
+  padding: 10px;
+  border-radius: 3rem;
+  box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+  margin: 90px 200px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.profile-picture {
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  background-image: url(../../assests/profile_pic.jpeg);
+  background-position: 50% 5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.left-container h1,
+.left-container p {
+  color: white;
+  text-align: center;
+}
+
+.left-container a {
+  text-decoration: none;
+}
+
+.left-container a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.social-icons a {
+  font-size: 24px;
+}
+
+.social-icons .linkedin {
+  color: #0077b5;
+}
+
+.social-icons .github {
+  color: #6a6767;
+}
+
+.social-icons .gmail {
+  color: #d44638;
+}
+
+.social-icons .instagram {
+  color: #e4405f;
+}
+
+.right-container {
+  flex: 1;
+  padding: 20px;
+  background-color: rgba(186, 169, 108, 0.3);
+  border-radius: 3rem;
+  margin: 30px 50px 0px -180px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.app-bar {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 3rem;
+  margin-left: 400px;
+  margin-right: 17px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app-bar ul {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.app-bar li {
+  color: #ffd500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+}
+
+.app-bar li.active,
+.app-bar li:hover {
+  color: aliceblue;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  border-radius: 3rem;
+  color: white;
+  z-index: 1;
+}
+
+.app-bar button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.app-bar button:hover {
+  text-decoration: underline;
+}
