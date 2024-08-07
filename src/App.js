@@ -7,7 +7,7 @@ import Landingpage from "./components/Landingpage/Landingpage";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/profile">
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Landingpage />} />
