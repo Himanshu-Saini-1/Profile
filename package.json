@@ -2,7 +2,7 @@
   "homepage": "https://Himanshu-Saini-1.github.io/profile",
   "name": "RESUME",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
