@@ -1,6 +1,6 @@
 .landing-page {
   display: flex;
-  height: 100vh;
+  height: 100%;
   background-color: black;
   position: relative;
 }
@@ -13,14 +13,15 @@
 }
 
 .left-container {
-  width: 240px;
+  position: static;
+  width: 25%;
   height: 550px;
   /* background-color: #baa96c; */
-  background-color: rgba(186, 169, 108, 0.3);
+  background-color: rgb(97 96 90 / 30%);
   padding: 10px;
   border-radius: 3rem;
   box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
-  margin: 90px 200px 0px 20px;
+  margin: 90px 0px 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +66,9 @@
 .social-icons a {
   font-size: 24px;
 }
+.social-icons a:hover {
+  color: rgb(222 235 98);
+}
 
 .social-icons .linkedin {
   color: #0077b5;
@@ -83,18 +87,58 @@
 }
 
 .right-container {
-  flex: 1;
+  /* flex: 1; */
   padding: 20px;
-  background-color: rgba(186, 169, 108, 0.3);
+  background-color: rgb(97 96 90 / 30%);
   border-radius: 3rem;
-  margin: 30px 50px 0px -180px;
+  /* margin: 30px 50px 0px -180px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
   z-index: 1;
+  overflow-y: auto;
+  margin-left: 1%;
+  margin-top: 2%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 95%;
+  height: 100vh;
+}
+/* Scrollbar styles */
+.right-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right-container::-webkit-scrollbar-track {
+  background: #333;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.right-container::-webkit-scrollbar-thumb {
+  background-color: #deeb62;
+  border-radius: 14px;
+  border: 3px solid #333;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+
+.right-container::-webkit-scrollbar-thumb:hover {
+  background: #bada55;
+}
+
+.right-container {
+  scrollbar-color: #deeb62 #333;
+  scrollbar-width: thin;
 }
 
 .app-bar {
   padding: 10px;
+  margin-top: -10px;
   margin-bottom: 20px;
   border-radius: 3rem;
   margin-left: 400px;
@@ -114,7 +158,7 @@
 }
 
 .app-bar li {
-  color: #ffd500;
+  color: #deeb62;
   cursor: pointer;
   display: flex;
   justify-content: space-around;
@@ -143,4 +187,135 @@
 
 .app-bar button:hover {
   text-decoration: underline;
+}
+
+.main {
+  display: grid;
+  max-width: 1200px;
+  margin: auto;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* @media (maxwidth: 480px) {
+}
+
+@media (maxwidth: 768px) {
+}
+@media (maxwidth: 1049px) {
+}
+@media (maxwidth: 1444px) {
+} */
+@media (max-width: 1049px) {
+  .left-container {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+  }
+
+  .right-container {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 120px;
+  }
+  .profile-picture {
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    background-image: url(../../assests/profile_pic.jpeg);
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    flex-direction: column;
+  }
+
+  .left-container {
+    margin: 20px;
+  }
+
+  .right-container {
+    margin: 20px 0;
+  }
+
+  .app-bar {
+    margin-left: 0;
+    justify-content: center;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 120px;
+  }
+  .profile-picture {
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    background-image: url(../../assests/profile_pic.jpeg);
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-container {
+    margin: 10px;
+    height: 20%;
+    width: 90%;
+  }
+
+  .right-container {
+    margin: 10px 0;
+    height: 80%;
+    width: 100%;
+  }
+
+  .app-bar ul {
+    margin-bottom: 30px;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .app-bar {
+    width: 200px;
+  }
+
+  .app-bar li {
+    margin-bottom: 10px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .profile-picture {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    background-image: url(../../assests/profile_pic.jpeg);
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
 }
