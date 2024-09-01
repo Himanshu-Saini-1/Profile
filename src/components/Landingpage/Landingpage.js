@@ -145,8 +145,8 @@ function Landingpage() {
             delaySpeed={3000}
           />
         </h1>
-        <p>himanshu.dcrust@gmail.com</p>
-        <p>9817770664</p>
+        {/* <p>himanshu.dcrust@gmail.com</p>
+        <p>9817770664</p> */}
         <div className="social-icons">
           {socialLinks.map((link, index) => (
             <a

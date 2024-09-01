@@ -7,7 +7,7 @@ function About() {
       <div className="intro">
         Hello! I’m Himanshu Saini, a Computer Science student and data analysis
         enthusiast. My academic background has provided me with strong
-        programming and statistical skills, fostering critical thinking and
+        programming and statistical skills, critical thinking and
         problem-solving abilities. I've contributed to data-driven
         decision-making at leading companies, transforming complex datasets into
         actionable insights and presenting clear findings to stakeholders for
